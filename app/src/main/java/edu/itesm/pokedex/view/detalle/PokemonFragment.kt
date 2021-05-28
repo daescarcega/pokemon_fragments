@@ -20,7 +20,6 @@ class PokemonFragment : Fragment() {
 
     lateinit var viewModel: PokemonViewModel
     private lateinit var binding: FragmentPokemonBinding
-    val args: PokemonFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +38,7 @@ class PokemonFragment : Fragment() {
     }
     private fun initUI(){
 
- val args = navArgs<PokemonFragmentArgs>()
+        val args = navArgs<PokemonFragmentArgs>()
         val id = args.value.id
         viewModel.getPokemonInfo(id)
 
